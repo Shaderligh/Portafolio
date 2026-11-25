@@ -51,4 +51,19 @@
         </article>
     </div>
 </section>
+
+<section class="section">
+    <div>
+        <h2 class="section__title">Skills</h2>
+        <p class="section__text">Technologies and tools I work with.</p>
+    </div>
+    <div class="chips">
+        {% for skill in skills %}
+        <span class="chip">{{ skill.name }}</span>
+        {% empty %}
+        <p class="section__text">No skills yet. Add them in the admin panel.</p>
+        {% endfor %}
+    </div>
+</section>
+
 {% endblock %}
