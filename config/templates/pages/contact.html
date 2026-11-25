@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<section class="page-head">
+    <h1 class="page-head__title">Contact</h1>
+    <p class="page-head__text">Want to collaborate, talk about a project or just say hi? You can find me here.</p>
+</section>
+
+<section class="contact-grid">
+    <a class="contact-card" href="mailto:tucorreo@ejemplo.com">
+        <span class="contact-card__label">Email</span>
+        <span class="contact-card__value">tucorreo@ejemplo.com</span>
+    </a>
+
+    <a class="contact-card" href="https://github.com/tuusuario" target="_blank">
+        <span class="contact-card__label">GitHub</span>
+        <span class="contact-card__value">github.com/tuusuario</span>
+    </a>
+
+    <a class="contact-card" href="https://www.linkedin.com/in/tuusuario" target="_blank">
+        <span class="contact-card__label">LinkedIn</span>
+        <span class="contact-card__value">linkedin.com/in/tuusuario</span>
+    </a>
+</section>
+{% endblock %}

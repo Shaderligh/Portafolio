@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About me{% endblock %}
+
+{% block content %}
+<section class="hero" style="background-image: url('{% static 'start/principal.jpg' %}');">
+    <h1 class="hero__title">PABLO S.</h1>
+    <p class="hero__text">Hi! I'm Pablo, an AI student with an interest in technology, art, design and video games.</p>
+    <div class="hero__actions">
+        <a class="btn" href="{% url 'projects' %}">See my projects</a>
+        <a class="btn btn--outline" href="{% url 'contact' %}">Contact me</a>
+    </div>
+</section>
+
+<section class="section">
+    <div>
+        <h2 class="section__title">About me</h2>
+        <p class="section__text">
+            I enjoy exploring the connection between creativity and technology, from programming and web development to
+            digital aesthetics and interactive experiences.
+        </p>
+        <p class="section__text">
+            I'm curious about how things work and how ideas can become something visual, functional and interactive. I'm
+            also constantly learning, experimenting and discovering new ways to express creativity through technology.
+        </p>
+
+        <p class="section__label">Interests</p>
+        <div class="chips">
+            <span class="chip">Software Development</span>
+            <span class="chip">Digital Art</span>
+            <span class="chip">Video Games</span>
+            <span class="chip">Web Design</span>
+            <span class="chip">Creative Technology</span>
+            <span class="chip">Interactive Experiences</span>
+        </div>
+    </div>
+
+    <div class="feature-list">
+        <article class="feature">
+            <h3 class="feature__title">Creativity</h3>
+            <p class="feature__text">Turning ideas into something visual, functional and interactive.</p>
+        </article>
+        <article class="feature">
+            <h3 class="feature__title">Technology</h3>
+            <p class="feature__text">Programming and web development as tools to build experiences.</p>
+        </article>
+        <article class="feature">
+            <h3 class="feature__title">Always learning</h3>
+            <p class="feature__text">Experimenting and discovering new ways to express ideas.</p>
+        </article>
+    </div>
+</section>
+{% endblock %}

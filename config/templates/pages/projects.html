@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<section class="showcase">
+    <div class="showcase__top">
+        <h2 class="showcase__title">Projects</h2>
+        <p class="showcase__subtitle">A selection of what I've built, with the technologies I used in each one.</p>
+    </div>
+
+    <div class="projects">
+        {% for project in projects %}
+        <article class="project-card">
+            <img class="project-card__img" src="{{ project.image.url }}" alt="{{ project.title }}">
+            <span class="project-card__badge">{{ project.year }}</span>
+
+            <div class="project-card__body">
+                <h3 class="project-card__title">{{ project.title }}</h3>
+                <p class="project-card__text">{{ project.description }}</p>
+
+                <div class="project-card__skills">
+                    {% for skill in project.skills.all %}
+                    <span class="project-card__skill">{{ skill.name }}</span>
+                    {% endfor %}
+                </div>
+
+                <div class="project-card__links">
+                    {% if project.url %}
+                    <a class="btn" href="{{ project.url }}" target="_blank">Live site</a>
+                    {% endif %}
+                    {% if project.repository %}
+                    <a class="btn btn--outline" href="{{ project.repository }}" target="_blank">Repository</a>
+                    {% endif %}
+                </div>
+            </div>
+        </article>
+        {% empty %}
+        <p>No projects yet.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
